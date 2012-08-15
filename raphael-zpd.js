@@ -145,8 +145,8 @@ RaphaelZPD = function(raphaelPaper, o) {
 		//me.root.onmouseout = me.handleMouseUp; // Decomment me to stop the pan functionality when dragging out of the SVG element
 		// The above messes with pan if you are on top of an svg element
 
-		if (navigator.userAgent.toLowerCase().indexOf('webkit') >= 0)
-			me.root.addEventListener('mousewheel', me.handleMouseWheel, false); // Chrome/Safari
+		if (navigator.userAgent.toLowerCase().indexOf('webkit') >= 0 || navigator.userAgent.toLowerCase().indexOf('trident') >= 0)
+			me.root.addEventListener('mousewheel', me.handleMouseWheel, false); // Chrome/Safari/IE9(Trident)
 		else
 			me.root.addEventListener('DOMMouseScroll', me.handleMouseWheel, false); // Others
 	};
