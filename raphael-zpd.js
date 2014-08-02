@@ -3,7 +3,8 @@
  * ==================================================
  *
  * This code is licensed under the following BSD license:
- * 
+ *
+ * Copyright 2014 Huei Tan <huei90@gmail.com> (Fix setupHandlers). All rights reserved.
  * Copyright 2010 Gabriel Zabusek <gabriel.zabusek@gmail.com> (Interface and feature extensions and modifications). All rights reserved.
  * Copyright 2010 Daniel Assange <somnidea@lemma.org> (Raphaël integration and extensions). All rights reserved.
  * Copyright 2009-2010 Andrea Leofreddi <a.leofreddi@itcharm.com> (original author). All rights reserved.
@@ -128,7 +129,7 @@ RaphaelZPD = function(raphaelPaper, o) {
 	/**
 	 * Handler registration
 	 */
-	me.setupHandlers = function(root) {
+	me.setupHandlers = function() {
 		me.root.onmousedown = me.handleMouseDown;
 		me.root.onmousemove = me.handleMouseMove;
 		me.root.onmouseup   = me.handleMouseUp;
@@ -315,7 +316,7 @@ RaphaelZPD = function(raphaelPaper, o) {
 
 
     // end of constructor
-  	me.setupHandlers(me.root);
+  	me.setupHandlers();
 	me.initialized = true;
 };
 
